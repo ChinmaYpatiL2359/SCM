@@ -1,0 +1,37 @@
+@keyframes ocapChange {
+    from{
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+    
+}
+@keyframes backOcapChange {
+    from{
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+    
+}
+
+@keyframes backGChange {
+    from{
+        color: var(#cc00ff);
+    } to {
+        color: var(#f815e5);
+    }
+    
+}
+
+
+.ocap100{
+    animation: ocapChange 1s ease-in-out;
+}
+
+.hoverani{
+background-image: var(#cc00ff);
+  :hover{
+animation: backGChange 1s ease-in;
+}
+}

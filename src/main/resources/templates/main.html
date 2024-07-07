@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html 
+lang="en"
+class="dark"
+th:fragment="GlobalParent(content, title, script)"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">Smart Contact Manager</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}">
+    <link rel="stylesheet" th:href="@{'/css/animation_grand.css'}">
+    <link rel="stylesheet" th:href="@{'/css/ani_ocap.css'}">
+    <link rel="stylesheet" th:href="@{'/css/ani_width.css'}">
+    <link rel="stylesheet" th:href="@{'/css/sizing.css'}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body class="bg-fuchsia-200 text-fuchsia-800 dark:bg-black dark:text-fuchsia-400 ">
+    
+    <section th:replace="~{navbar :: navbar-main}">
+        
+    </section>
+   
+
+    <section th:replace="${content}"></section>
+
+    <footer class="p-4 text-2xl bg-gray-900 text-black dark:text-white">
+        In Progrees
+  
+    </footer>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script th:src="@{'/js/theme/oled_theme_script.js'}">
+    </script>
+
+<script th:src="@{'/js/scroll_save.js'}">
+    </script>
+    
+    <th:block th:replace="${script}"></th:block>
+</body>
+</html>

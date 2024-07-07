@@ -1,0 +1,3 @@
+<div>
+ <img data-th-src="@{'/images/LogoScm.png'}" class="h-40 down_in" alt="Logo" />
+</div>

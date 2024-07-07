@@ -1,0 +1,25 @@
+@keyframes widthChange50 {
+    from{
+        width: 100%;
+    } to {
+        width: 20%;
+    }
+}
+
+.width50{
+    animation: widthChange50 1s ease-in-out;
+}
+
+@keyframes borderWidthChange50 {
+    from{
+       border-radius: 0px;
+ 
+    } to {
+        border-radius: 24px;
+       
+    }
+}
+
+.border_width50{
+    animation: borderWidthChange50 1s ease-in-out;
+}

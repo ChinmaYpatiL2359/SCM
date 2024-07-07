@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{main :: GlobalParent(~{::#content},~{::title},~{::script})}">
 <head>
-    <title>Service</title>
+    <title>temp</title>
 </head>
 <body>
 
-    <div id="content">
-        <h1>Service Page</h1>
+    <div id="content"> 
+        <h1>About Page</h1>
     </div>
-<script>
-    console.log("From Service");
-</script>
+
+    <script>
+        console.log("From temp");
+    </script>
+
 </body>
 </html> 

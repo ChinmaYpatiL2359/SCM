@@ -1,0 +1,18 @@
+//Link Button
+<div class="flex md:mx-auto">
+<a th:href="@{'/signup'}" 
+        class=" p-4 rounded-3xl dark:bg-gray-900  dark:hover:bg-gray-800 bg-fuchsia-400 hover:bg-fuchsia-500">
+        <i class="fa-solid fa-user-plus"></i> name
+        </a>
+</div>
+_________________________________________________________________________________________________________________
+
+//click Button
+<div class="flex md:mx-auto">
+  <button id="" class= "p-4 text-xl rounded-3xl dark:bg-gray-900 hover:bg-fuchsia-500 dark:hover:bg-gray-800 bg-fuchsia-400 ">
+    <i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_toggle">
+      light
+    </span>
+  </button>
+</div>
+_________________________________________________________________________________________________________________

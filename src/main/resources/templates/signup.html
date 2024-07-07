@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html 
+lang="en"
+class="dark"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{'/css/animation_grand.css'}">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-fuchsia-200 text-fuchsia-900 dark:bg-black dark:text-fuchsia-400">
+    
+<div class="p-8 mx-auto space-y-4 md:items-center">
+   
+  <div class=" bg-fuchsia-400 dark:bg-black rounded-3xl p-4 md:w-1/2 md:mx-auto  flex flex-col items-start md:space-x-4 space-y-2 md:flex-row">
+    <div class="my-4 left_in space-x-4 md:flex md:flex-col md:space-y-2">
+      <a th:href="@{'/home'}"
+      class="p-4 text-2xl rounded-3xl ">
+      <i class="fa-solid fa-arrow-left"></i>
+        Back
+      </a>
+      <button id="theme_toggle_ele" class= "p-4 right_in text-xl rounded-3xl  ">
+        <i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_toggle">
+          light
+        </span>
+      </button>
+    </div> 
+          <div name="card" class=" m-auto left_in  p-4 flex items-start rounded-3xl border-fuchsia-500">
+          
+            <div class="flex flex-col font-medium">
+              <div class="flex items-end">
+                <div class="flex flex-col ">
+              <span class="typing-text text-4xl animate-charcter">Smart</span>
+              <span class="typing-text text-3xl animate-charcter">Contact</span>
+              <span class="typing-text text-2xl animate-charcter">Manager</span>
+            </div>
+              <a href="/home" >
+                <img data-th-src="@{'/images/LogoScm.png'}" class="h-40" alt="Logo" />
+              </a>
+            </div>
+              <span class=" animate-charcter-login text-5xl">signup</span>
+          </div>
+      
+      </div> 
+      <div class="m-auto p-4 right_in  flex items-center rounded-3xl border-fuchsia-500">   
+     
+
+    </div> 
+    
+    </div>
+  
+  </div>    
+
+
+
+    
+
+    <footer class="p-4 text-2xl text-white bg-slate-900">
+        In Progrees
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script th:src="@{'/js/theme/oled_theme_script.js'}"></script>
+  
+</body>
+</html>
