@@ -19,14 +19,14 @@ class="dark"
     
 <div class="p-8 mx-auto space-y-4 md:items-center">
    
-  <div class=" bg-fuchsia-400 dark:bg-black rounded-3xl p-4 md:w-1/2 md:mx-auto  flex flex-col items-start md:space-x-4 space-y-2 md:flex-row">
+  <div class=" rounded-3xl p-4 md:w-1/2 md:mx-auto  flex flex-col items-start md:space-x-4 space-y-2 md:flex-row">
     <div class="my-4 left_in space-x-4 md:flex md:flex-col md:space-y-2">
-      <a th:href="@{'/home'}"
+      <a name="button" th:href="@{'/home'}"
       class="p-4 text-2xl rounded-3xl ">
       <i class="fa-solid fa-arrow-left"></i>
         Back
       </a>
-      <button id="theme_toggle_ele" class= "p-4 right_in text-xl rounded-3xl  ">
+      <button name="button" id="theme_toggle_ele" class= "p-4 right_in text-xl rounded-3xl  ">
         <i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_toggle">
           light
         </span>

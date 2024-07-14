@@ -2,7 +2,7 @@
 <div th:fragment="navbar-main">
 <nav class="flex flex-wrap mt-3 md:items-center md:flex-row">
   <div class=" ml-4 md:mx-auto p-2">
-  <a href="/home" class="flex items-center md:self-center border-fuchsia-500 rounded-3xl  p-2 md:mx-auto">
+  <a name="card" href="/home" class="flex items-center md:self-center border-fuchsia-500 rounded-3xl  p-2 md:mx-auto">
     <img data-th-src="@{'/images/LogoScm.png'}" class=" h-12 md:h-8" alt="Logo" />
     <span class="text-3xl p-2 font-semibold">SCM</span>
 </a>
@@ -17,7 +17,7 @@
 </button>
 </div>
 <div class="md:flex p-2 md:mx-auto md:order-3 ">
-  <button id="theme_toggle_ele" class= "p-4 text-xl rounded-3xl   ">
+  <button name="button" id="theme_toggle_ele" class= "p-4 text-xl rounded-3xl   ">
     <i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_toggle">
       _____
     </span>
@@ -26,17 +26,17 @@
 
     <div id="navbar-cta" class="order-3  md:order-2 hidden md:flex  text-xl space-x-2 md:space-x-8">
        <div class="flex flex-row space-x-4 p-2">
-          <a th:href="@{'/home'}" class="block p-3 backsize  rounded-3xl " aria-current="page">
+          <a name="button" th:href="@{'/home'}" class="block p-3 backsize  rounded-3xl " aria-current="page">
              <i class="fa-solid fa-house"></i> Home</a>
    
-          <a th:href="@{'/about'}" class="block  p-3 backsize rounded-3xl ">
+          <a name="button" th:href="@{'/about'}" class="block  p-3 backsize rounded-3xl ">
              <i class="fa-solid fa-eject"></i> About</a>
         
 
-          <a th:href="@{'/service-1'}" class="block  backsize p-3  rounded-3xl">
+          <a name="button" th:href="@{'/service-1'}" class="block  backsize p-3  rounded-3xl">
              <i class="fa-solid fa-gear"></i> Services</a>
 
-          <a th:href="@{'/help'}" class="block p-3 backsize rounded-3xl  ">
+          <a name="button" th:href="@{'/help'}" class="block p-3 backsize rounded-3xl  ">
             <i class="fa-solid fa-circle-info"></i> Help</a>
           </div>
     </div>

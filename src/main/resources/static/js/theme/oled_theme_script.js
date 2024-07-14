@@ -35,17 +35,11 @@ console.log("theme script(OLED)");
        let aTag="a";
        let buttonTag="button";
 
-       //tag array
-       const tags = [
-        aTag, 
-        buttonTag
-    ];
-
-      //tag array for hover effect
-      const hoverTags = [
-        aTag,
-        buttonTag
-      ];
+   
+     //hoverElementsByNamne
+     const hoverNames = [
+        "button"
+     ]
 
        //elementByNames
        const names = [
@@ -76,8 +70,7 @@ console.log("theme script(OLED)");
                 bodyTag, 
                 oledTheme
             );
-            eleAddClass(elementDark, tags, names);
-            eleAddClass(elementHoverDark, hoverTags, null);
+            eleAddClass(elementDark, elementHoverDark, hoverNames, names);
         
               
             }else if(currentTheme == oledTheme) {
@@ -90,8 +83,8 @@ console.log("theme script(OLED)");
                      lightTheme
                     );
                     
-                    eleAddClass(elementOled, tags, names);
-                    eleAddClass(elementHoverOled, hoverTags, null);
+                    eleAddClass(elementOled, elementHoverOled, hoverNames, names);
+                   
 
             }else{
 
@@ -102,8 +95,8 @@ console.log("theme script(OLED)");
                      darkTheme
                     );
 
-                    eleAddClass(elementNormal, tags, names);
-                    eleAddClass(elementHoverNormal, hoverTags, null);
+                    eleAddClass(elementNormal, elementHoverNormal, hoverNames, names);
+              
 
 
                     
@@ -134,8 +127,8 @@ console.log("theme script(OLED)");
                  bodyTag, 
                  lightTheme
                 );
-                eleRemoveClass(elementDark, tags, names);
-                eleAddClass(elementOled, tags, names);
+                eleRemoveClass(elementDark, elementHoverDark, hoverNames, names);
+                eleAddClass(elementOled, elementHoverOled, hoverNames, names);
 
 
             //save theme
@@ -152,7 +145,7 @@ console.log("theme script(OLED)");
                 darkTheme
             );
 
-            eleAddClass(elementNormal, tags, names);
+            eleAddClass(elementNormal, elementHoverNormal, hoverNames, names);
 
             //save theme
             saveTheme(lightTheme);
@@ -175,7 +168,7 @@ console.log("theme script(OLED)");
                 oledTheme
             );
               
-            eleAddClass(elementDark, tags, names);
+            eleAddClass(elementDark, elementHoverDark, hoverNames, names);
             //save theme
             saveTheme(darkTheme);
         }
@@ -224,12 +217,13 @@ console.log("theme script(OLED)");
 
 //element functions________________________________________________________
        //swap element class in bulk
-      function eleRemoveClass(bgClass, hoverClass, targetedTags, targetedNames) {
-        if(targetedTags != null) {    
-        targetedTags.forEach(tag => {
-             const elements = Array.from(document.querySelectorAll(tag));
-                   elements.forEach((e) => {
-                    e.classList.remove(bgClass);
+      function eleRemoveClass(bgClass, hoverClass, targetedHover, targetedNames) {
+        if(targetedHover != null) {    
+        targetedHover.forEach(e => {
+               const hoverNames = document.getElementsByName(e);
+                   hoverNames.forEach((n) => {
+                    n.classList.remove(bgClass);
+                    n.classList.remove(hoverClass);
                     
                 });
             });
@@ -239,21 +233,24 @@ console.log("theme script(OLED)");
                     const name = document.getElementsByName(e);
                     name.forEach((n) => {
                         n.classList.remove(bgClass);
+                        
                     })
                    
                 });
             }   
         }
     
-        function eleAddClass(bgClass, hoverClass, targetedTags, targetedNames) {
-            if(targetedTags != null) { 
-            targetedTags.forEach(tag => {
-                const elements = Array.from(document.querySelectorAll(tag));
-                      elements.forEach((e) => {
-                       e.classList.add(bgClass);
-                   });
-               });
-            }
+        function eleAddClass(bgClass, hoverClass, targetedHover, targetedNames) {
+            if(targetedHover != null) {    
+                targetedHover.forEach(e => {
+                       const hoverNames = document.getElementsByName(e);
+                           hoverNames.forEach((n) => {
+                            n.classList.add(bgClass);
+                            n.classList.add(hoverClass);
+                            
+                        });
+                    });
+                }        
    
                if(targetedNames != null) {   
                    targetedNames.forEach((e) => {
