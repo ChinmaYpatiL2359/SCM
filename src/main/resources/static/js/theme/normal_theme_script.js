@@ -2,6 +2,10 @@ console.log("theme script(OLED)");
 
 //__theme toggle script-NORMAL____________________________________________________________
 
+   /* 
+   this script only works if elements has pre-defined color class
+   */
+
     //current theme 
        let defaultTheme = "light";
        let currentTheme=themeGetFromLocal();

@@ -156,7 +156,7 @@ console.log("theme script(OLED)");
             themeSwap(
                 bodyOled, 
                 bodyNormal, 
-                bodyTag, 
+                bodyTag,        
                 null
             );
 
@@ -239,7 +239,9 @@ console.log("theme script(OLED)");
                 });
             }   
         }
-    
+        
+    //_________________________________________________________________________________
+
         function eleAddClass(bgClass, hoverClass, targetedHover, targetedNames) {
             if(targetedHover != null) {    
                 targetedHover.forEach(e => {
