@@ -41,7 +41,7 @@ public class SocialLink {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_number", unique = true)
-    private String idOfSocialLink;
+    private int idOfSocialLink;
 //_____________________________________________    
 
 }

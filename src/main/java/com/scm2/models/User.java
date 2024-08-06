@@ -58,11 +58,11 @@ public class User {
     @Column(name = "id_number", unique = true, nullable = false)
     private String IdOfUser;
 
-    @Column(name = "id_name", unique = true, nullable = false)
+    @Column(name = "id_name", unique = true, nullable = true)
     private String userNameofUser;
 
     @Column(name = "id_password", unique = false, nullable = false)
-    private String passowrdOfUser;
+    private String passwordOfUser;
 //__________________________________________________________________________   
 
 //account status 

@@ -1,5 +1,6 @@
 package com.scm2.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.scm2.models.User;
 import com.scm2.models.inputs.UserInputForum;
+import com.scm2.repositories.UserRepo;
+import com.scm2.services.UserService;
 
 
 
@@ -15,9 +19,11 @@ import com.scm2.models.inputs.UserInputForum;
 @Controller
 public class signupController {
 
+  @Autowired
+  private UserService userService;
   //signup.html
    @RequestMapping("/signup")
-    public String loginPage(Model model) {
+    public String sigupPage(Model model) {
         System.out.println("SignUp Page Handler");
        UserInputForum userInputForum = new UserInputForum();
 
@@ -37,10 +43,19 @@ public class signupController {
   public String startSignup(@ModelAttribute UserInputForum userInputForum) {
     System.out.println("Signup Handler");
     //fetch data from front
-    System.out.println(userInputForum);
     //validate current data 
     //saving to database
+    User user = User.builder()
+    .nameOfUser(userInputForum.getInputName())
+    .emailOfUser(userInputForum.getInputEmail())
+    .passwordOfUser(userInputForum.getInputPassword())
+    .phoneNumberOfUser(userInputForum.getInputPhoneNumber())
+    .picOfUser("/images/DefualtProPic.png")
+    .build();
+
+    User savedUser = userService.saveUser(user);
     //cofirmation to front
+    System.out.println(savedUser);
     //redirect sigup page
       return "redirect:/signup";
   }
